@@ -1,4 +1,4 @@
-# Project Name #
+# Top Twitch Clips #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -42,3 +42,28 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+
+Top Twitch Clips
+
+An app that displays all of the top clips from the most popular games/categories that day providing easy access for the entire Twitch community to connect with. 
+
+This app would benefit both viewers and broadcasters by making it easy to access top highlights from the most popular games and categories being played. The app would also provide exposure to both new games and broadcasters. 
+
+Currently the only way to access popular clips is to go to the specific game category and browse the clips from only that specific game. This limits visibility and also exposure opportunities for broadcasters and other games/categories to potentially grow. 
+
+There is an opportunity to provide exposure to both broadcasters and other games/categories by displaying the top clips from a list of the most popular games/categories currently being streamed on Twitch by providing easy access to a selection of top clips from each day.
+
+"Twitch thrives because of its amazing community." -Heather 
+
+Getting started is simple and it is not required to be logged into your user account. By visiting the site you'll be able to view all of the top popular clips from that day.  
+
+"Top Twitch Clips introduced me to a new broadcaster streaming a game I normally woudln't have watched, and now I am a part of their super welcoming community!" -Superwae 
+
+To find out more information or to register for the Beta please visit TopTwitchClips.tv!
+
+
+
+
+
+
+
