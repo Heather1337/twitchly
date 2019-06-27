@@ -1,10 +1,5 @@
 import React from 'react';
-const width = 385;
-const height = 280;
 
-// const game1 = props.data[0].box_art_url;
-// game1.replace("{height}", height)
-// game1.replace("{width}", width);
 
 const TopGames = (props) => {
   console.log('props --->', props.data);
@@ -19,11 +14,11 @@ const TopGames = (props) => {
   return (
     <div>
       <div>Top Games Component</div>  
-      <div><img src={gameImg1}></img></div>
-      <div><img src={gameImg2}></img></div>
-      <div><img src={gameImg3}></img></div>
+      <img src={gameImg1}></img>
+      <img src={gameImg2}></img>
+      <img src={gameImg3}></img>
     </div>
   )
-}
+};
 
 export default TopGames;

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import TopGames from './topGames.jsx';
+import GameOneClips from './gameOneClips.jsx';
 const reqHeader = '74adg56gxuy8p8vk8h3s46egh70mqj';
 
 
@@ -40,8 +41,8 @@ class App extends React.Component {
     return (
       <div>
         <textarea></textarea>
-        <div>{this.state.games.length ?  <TopGames data={this.state.games}></TopGames> : null}</div>
-        <div>{this.state.games.length ? this.state.games[0].name : null}</div>
+        <div>{this.state.games.length ?  <TopGames data={this.state.games}/>: null}</div>
+        <div>{this.state.games.length ? <GameOneClips data={this.state.games[0].id}/> : null}</div>
       </div>
     )
   }
