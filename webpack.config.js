@@ -1,6 +1,6 @@
 var path = require('path');
-var SRC_DIR = path.join(__dirname + '/src');
-var DIST_DIR = path.join(__dirname + '/public');
+var SRC_DIR = path.join(__dirname, '/src');
+var DIST_DIR = path.join(__dirname, '/public');
 
 module.exports = {
   entry: `${SRC_DIR}/app.jsx`,
@@ -8,7 +8,7 @@ module.exports = {
     filename: 'bundle.js',
     path: DIST_DIR
   },
-  moodule: {
+  module: {
     loaders: [
       {
         test: /\.jsx?/,

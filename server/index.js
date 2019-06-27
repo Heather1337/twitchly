@@ -5,8 +5,9 @@ const bodyParser = require('body-parser');
 const port = 2000;
 
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(express.static(path.join(__dirname + '/../public')));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded());
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
