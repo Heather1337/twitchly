@@ -9,5 +9,5 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
 app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`);
+  console.log(`Server is listening on port ${port}`);
 });
