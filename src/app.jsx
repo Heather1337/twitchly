@@ -21,6 +21,14 @@ class App extends React.Component {
       clips2: [],
       clips3: [],
     };
+    this.handleClick1 = this.handleClick1.bind(this);
+  }
+
+  handleClick1(e) {
+    e.preventDefault();
+    console.log('Game1 was clicked!!!');
+    const game = this.state.games[0].name;
+    window.location=`https://www.twitch.tv/directory/game/${game}`;
   }
 
   getGames() {
@@ -106,7 +114,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div>{this.state.games.length ? <TopGames data={this.state.games}/>: null}</div>
+        <div>{this.state.games.length ? <TopGames data={this.state.games} click={this.handleClick1}/>: null}</div>
         <VideoDiv>{this.state.games.length ? <GameOneClips clips={this.state.clips1}/> : null}</VideoDiv>
         <VideoDiv>{this.state.games.length ? <GameTwoClips clips={this.state.clips2}/> : null}</VideoDiv>
         <VideoDiv>{this.state.games.length ? <GameThreeClips clips={this.state.clips3}/> : null}</VideoDiv>

@@ -16,6 +16,14 @@ const TopDiv = styled.div`
   padding-left: 5px;
 `;
 
+const GamesText = styled.div`
+  color: #443168;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  font-family: "HelveticaNeue-Light"; 
+`;
+
 const TopGames = (props) => {
   console.log('props --->', props.data);
   var game1 = props.data[0].box_art_url;
@@ -28,8 +36,8 @@ const TopGames = (props) => {
   console.log(game1);
   return (
     <TopDiv>
-      <div>Top Games Component</div>  
-      <Video1 src={gameImg1}></Video1>
+      <GamesText>Top live channels</GamesText>  
+      <Video1 src={gameImg1} onClick={props.click}></Video1>
       <img src={gameImg2}></img>
       <Video src={gameImg3}></Video>
     </TopDiv>
