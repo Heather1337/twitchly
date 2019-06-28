@@ -22,12 +22,28 @@ class App extends React.Component {
       clips3: [],
     };
     this.handleClick1 = this.handleClick1.bind(this);
+    this.handleClick2 = this.handleClick2.bind(this);
+    this.handleClick3 = this.handleClick3.bind(this);
   }
 
   handleClick1(e) {
     e.preventDefault();
     console.log('Game1 was clicked!!!');
     const game = this.state.games[0].name;
+    window.location=`https://www.twitch.tv/directory/game/${game}`;
+  }
+
+  handleClick2(e) {
+    e.preventDefault();
+    console.log('Game2 was clicked!!!');
+    const game = this.state.games[1].name;
+    window.location=`https://www.twitch.tv/directory/game/${game}`;
+  }
+
+  handleClick3(e) {
+    e.preventDefault();
+    console.log('Game3 was clicked!!!');
+    const game = this.state.games[2].name;
     window.location=`https://www.twitch.tv/directory/game/${game}`;
   }
 
@@ -114,7 +130,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div>{this.state.games.length ? <TopGames data={this.state.games} click={this.handleClick1}/>: null}</div>
+        <div>{this.state.games.length ? <TopGames data={this.state.games} click={this.handleClick1} click2={this.handleClick2} click3={this.handleClick3}/>: null}</div>
         <VideoDiv>{this.state.games.length ? <GameOneClips clips={this.state.clips1}/> : null}</VideoDiv>
         <VideoDiv>{this.state.games.length ? <GameTwoClips clips={this.state.clips2}/> : null}</VideoDiv>
         <VideoDiv>{this.state.games.length ? <GameThreeClips clips={this.state.clips3}/> : null}</VideoDiv>

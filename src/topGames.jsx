@@ -38,8 +38,8 @@ const TopGames = (props) => {
     <TopDiv>
       <GamesText>Top live channels</GamesText>  
       <Video1 src={gameImg1} onClick={props.click}></Video1>
-      <img src={gameImg2}></img>
-      <Video src={gameImg3}></Video>
+      <img src={gameImg2} onClick={props.click2}></img>
+      <Video src={gameImg3} onClick={props.click3}></Video>
     </TopDiv>
   )
 };
