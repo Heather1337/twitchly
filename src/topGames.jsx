@@ -1,5 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 
+const Video = styled.img`
+  padding-left: 20px;
+  padding-right: 20px;
+`;
 
 const TopGames = (props) => {
   console.log('props --->', props.data);
@@ -14,9 +19,9 @@ const TopGames = (props) => {
   return (
     <div>
       <div>Top Games Component</div>  
-      <img src={gameImg1}></img>
-      <img src={gameImg2}></img>
-      <img src={gameImg3}></img>
+      <Video src={gameImg1}></Video>
+      <Video src={gameImg2}></Video>
+      <Video src={gameImg3}></Video>
     </div>
   )
 };
