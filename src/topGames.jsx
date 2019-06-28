@@ -2,8 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Video = styled.img`
-  padding-left: 20px;
-  padding-right: 20px;
+  display: inline-block;
+  padding-left 5%;
+`;
+
+const Video1 = styled.img`
+  dipslay: inline-block;
+  padding-left: 25%;
+  padding-right: 5%;
+`;
+
+const TopDiv = styled.div`
+  padding-left: 5px;
 `;
 
 const TopGames = (props) => {
@@ -17,12 +27,12 @@ const TopGames = (props) => {
 
   console.log(game1);
   return (
-    <div>
+    <TopDiv>
       <div>Top Games Component</div>  
-      <Video src={gameImg1}></Video>
-      <Video src={gameImg2}></Video>
+      <Video1 src={gameImg1}></Video1>
+      <img src={gameImg2}></img>
       <Video src={gameImg3}></Video>
-    </div>
+    </TopDiv>
   )
 };
 
