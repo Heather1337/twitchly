@@ -44,6 +44,10 @@ const GameTwoClips = (props) => {
   var name4;
   var views4;
   var click4;
+  var clickStream1;
+  var clickStream2;
+  var clickStream3;
+  var clickStream4;
 
   if (props.clips[0]) {
     clip1 = props.clips[0].thumbnail_url;
@@ -82,6 +86,22 @@ const GameTwoClips = (props) => {
       e.preventDefault();
       window.location=vid4;
     }
+    clickStream1 = (e) => {
+      e.preventDefault();
+      window.location=`https://www.twitch.tv/${name1}`;
+    }
+    clickStream2 = (e) => {
+      e.preventDefault();
+      window.location=`https://www.twitch.tv/${name2}`;
+    }
+    clickStream3 = (e) => {
+      e.preventDefault();
+      window.location=`https://www.twitch.tv/${name3}`;
+    }
+    clickStream4 = (e) => {
+      e.preventDefault();
+      window.location=`https://www.twitch.tv/${name4}`;
+    }
   }
 
   return (
@@ -89,25 +109,25 @@ const GameTwoClips = (props) => {
       <Gamenametwo>Top clips from {props.games}</Gamenametwo>
       <ClipsBlock2>
         <ClipImage2 src={clip1} onClick={click1}></ClipImage2>
-        <Vidtext2>{name1}</Vidtext2>
+        <Vidtext2 onClick={clickStream1}>{name1}</Vidtext2>
         <Vidtext2>Views: {views1}</Vidtext2>
       </ClipsBlock2>
 
       <ClipsBlock2>
         <ClipImage2 src={clip2} onClick={click2}></ClipImage2>
-        <Vidtext2>{name2}</Vidtext2>
+        <Vidtext2 onClick={clickStream2}>{name2}</Vidtext2>
         <Vidtext2>Views: {views2}</Vidtext2>
       </ClipsBlock2>
 
       <ClipsBlock2>
         <ClipImage2 src={clip3} onClick={click3}></ClipImage2>
-        <Vidtext2>{name3}</Vidtext2>
+        <Vidtext2 onClick={clickStream3}>{name3}</Vidtext2>
         <Vidtext2>Views: {views3}</Vidtext2>
       </ClipsBlock2>
 
       <ClipsBlock2>
         <ClipImage2 src={clip4} onClick={click4}></ClipImage2>
-        <Vidtext2>{name4}</Vidtext2>
+        <Vidtext2 onClick={clickStream4}>{name4}</Vidtext2>
         <Vidtext2>Views: {views4}</Vidtext2>
       </ClipsBlock2>
     </Video2>

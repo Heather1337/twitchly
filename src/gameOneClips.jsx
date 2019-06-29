@@ -19,6 +19,7 @@ const ClipImage = styled.img`
 
 const Vidtext = styled.div`
   color: #664a9c;
+  onHover: 
 `
 
 const Gamenameone = styled.div`
@@ -45,6 +46,10 @@ const GameOneClips = (props) => {
   var name4;
   var views4;
   var click4;
+  var clickStream1;
+  var clickStream2;
+  var clickStream3;
+  var clickStream4;
   if (props.clips[0]) {
     clip1 = props.clips[0].thumbnail_url;
     var vid1 = props.clips[0].url;
@@ -82,6 +87,23 @@ const GameOneClips = (props) => {
       e.preventDefault();
       window.location=vid4;
     }
+
+    clickStream1 = (e) => {
+      e.preventDefault();
+      window.location=`https://www.twitch.tv/${name1}`;
+    }
+    clickStream2 = (e) => {
+      e.preventDefault();
+      window.location=`https://www.twitch.tv/${name2}`;
+    }
+    clickStream3 = (e) => {
+      e.preventDefault();
+      window.location=`https://www.twitch.tv/${name3}`;
+    }
+    clickStream4 = (e) => {
+      e.preventDefault();
+      window.location=`https://www.twitch.tv/${name4}`;
+    }
   }
   console.log('clips1 and site ----', clip1)
   return (
@@ -89,25 +111,25 @@ const GameOneClips = (props) => {
       <Gamenameone>Top clips from {props.games}</Gamenameone>
       <ClipsBlock>
         <ClipImage src={clip1} onClick={click1}></ClipImage>
-        <Vidtext>{name1}</Vidtext>
+        <Vidtext onClick={clickStream1}>{name1}</Vidtext>
         <Vidtext>Views: {views1}</Vidtext>
       </ClipsBlock>
 
       <ClipsBlock>
         <ClipImage src={clip2} onClick={click2}></ClipImage>
-        <Vidtext>{name2}</Vidtext>
+        <Vidtext onClick={clickStream2}>{name2}</Vidtext>
         <Vidtext>Views: {views2}</Vidtext>
       </ClipsBlock>
 
       <ClipsBlock>
         <ClipImage src={clip3} onClick={click3}></ClipImage>
-        <Vidtext>{name3}</Vidtext>
+        <Vidtext onClick={clickStream3}>{name3}</Vidtext>
         <Vidtext>Views: {views3}</Vidtext>
       </ClipsBlock>
 
       <ClipsBlock>
         <ClipImage src={clip4} onClick={click4}></ClipImage>
-        <Vidtext>{name4}</Vidtext>
+        <Vidtext onClick={clickStream4}>{name4}</Vidtext>
         <Vidtext>Views: {views4}</Vidtext>
       </ClipsBlock>
     </Video>
