@@ -95,20 +95,20 @@ const GameTwoClips = (props) => {
 
       <ClipsBlock2>
         <ClipImage2 src={clip2} onClick={click2}></ClipImage2>
-        <div>{name2}</div>
-        <div>Views: {views2}</div>
+        <Vidtext2>{name2}</Vidtext2>
+        <Vidtext2>Views: {views2}</Vidtext2>
       </ClipsBlock2>
 
       <ClipsBlock2>
         <ClipImage2 src={clip3} onClick={click3}></ClipImage2>
-        <div>{name3}</div>
-        <div>Views: {views3}</div>
+        <Vidtext2>{name3}</Vidtext2>
+        <Vidtext2>Views: {views3}</Vidtext2>
       </ClipsBlock2>
 
       <ClipsBlock2>
         <ClipImage2 src={clip4} onClick={click4}></ClipImage2>
-        <div>{name4}</div>
-        <div>Views: {views4}</div>
+        <Vidtext2>{name4}</Vidtext2>
+        <Vidtext2>Views: {views4}</Vidtext2>
       </ClipsBlock2>
     </Video2>
   )

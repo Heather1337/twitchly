@@ -6,6 +6,7 @@ import TopGames from './topGames.jsx';
 import GameOneClips from './gameOneClips.jsx';
 import GameTwoClips from './gameTwoClips.jsx';
 import GameThreeClips from './gameThreeClips.jsx';
+import Search from './search.jsx';
 const reqHeader = '74adg56gxuy8p8vk8h3s46egh70mqj';
 
 const VideoDiv = styled.div`
@@ -24,6 +25,27 @@ class App extends React.Component {
     this.handleClick1 = this.handleClick1.bind(this);
     this.handleClick2 = this.handleClick2.bind(this);
     this.handleClick3 = this.handleClick3.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+  }
+
+  handleSearch(e) {
+    e.preventDefault();
+    console.log('button was clicked!');
+    var name = document.getElementById('search').value;
+    var searchName = [];
+    for (var i = 0; i < name.length; i++) {
+      if (name[i] === ' ') {
+        searchName.push('%20')
+      } 
+      else if ( name[i] === '-') {
+        searchName.push('%3A');
+      } else {
+        searchName.push(name[i]);
+      }
+    }
+    var result = searchName.join('');
+    console.log('result from search string', result);
+    window.location=`https://www.twitch.tv/directory/game/${result}`;
   }
 
   handleClick1(e) {
@@ -130,6 +152,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Search search={this.handleSearch}></Search>
         <div>{this.state.games.length ? <TopGames data={this.state.games} click={this.handleClick1} click2={this.handleClick2} click3={this.handleClick3}/>: null}</div>
         <VideoDiv>{this.state.games.length ? <GameOneClips clips={this.state.clips1} games={this.state.games[0].name}/> : null}</VideoDiv>
         <VideoDiv>{this.state.games.length ? <GameTwoClips clips={this.state.clips2} games={this.state.games[1].name}/> : null}</VideoDiv>

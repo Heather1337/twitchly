@@ -5,28 +5,9 @@ body {
   background-color: #faf9fa;
 }
 
-#navBar {
-  height: 50px;
-  background-color: #6441a5;
-}
-
-#header {
-  font-size: 20px;
-  padding-top: 20px;
-  color: white;
-}
 
 #textDiv {
   display: inline-block;
 }
 
-#searchBar {
-  margin-left: 25%;
-  margin-top: 5%;
-  border: 1px solid #8469b6;
-  background-color: #443168;
-  color: #faf9fa;
-  text-align: center;
-  border-radius: 25px;
-}
 

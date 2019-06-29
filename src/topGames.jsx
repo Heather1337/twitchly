@@ -13,15 +13,16 @@ const Video1 = styled.img`
 `;
 
 const TopDiv = styled.div`
+  height: 330px;
   padding-left: 5px;
 `;
 
 const GamesText = styled.div`
-  color: #443168;
-  font-weight: bold;
+  margin-top: 35px;
   text-align: center;
-  font-size: 25px;
-  font-family: "HelveticaNeue-Light"; 
+  font-size: 20px;
+  font-weight: bold;
+  color: #664a9c;
 `;
 
 const TopGames = (props) => {
