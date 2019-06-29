@@ -76,9 +76,9 @@ class App extends React.Component {
             if (err) console.log('Error getting videos from Twitch API');
         },
         success: (data) => {
-          console.log('Results from getGameOneClips ----->', data);
+          console.log('Results from getGameOneClips ----->', data, data.data[0].thumbnail_url);
           this.setState({
-            clips1: [data.data[0].embed_url, data.data[1].embed_url, data.data[2].embed_url, data.data[3].embed_url, data.data[4].embed_url, data.data[5].embed_url]
+            clips1: [data.data[0], data.data[1], data.data[2], data.data[3], data.data[4], data.data[5]]
           });
           this.getClipsTwo();
           console.log('state after clips call', this.state);
@@ -97,7 +97,7 @@ class App extends React.Component {
         success: (data) => {
           console.log('Results from getGameTwoClips ----->', data);
           this.setState({
-            clips2: [data.data[0].embed_url, data.data[1].embed_url, data.data[2].embed_url, data.data[3].embed_url, data.data[4].embed_url, data.data[5].embed_url]
+            clips2: [data.data[0], data.data[1], data.data[2], data.data[3], data.data[4], data.data[5]]
           });
           this.getClipsThree();
           console.log('state after clips call', this.state);
@@ -116,7 +116,7 @@ class App extends React.Component {
         success: (data) => {
           console.log('Results from getGameOneClips ----->', data);
           this.setState({
-            clips3: [data.data[0].embed_url, data.data[1].embed_url, data.data[2].embed_url, data.data[3].embed_url, data.data[4].embed_url, data.data[5].embed_url]
+            clips3: [data.data[0], data.data[1], data.data[2], data.data[3], data.data[4], data.data[5]]
           });
           console.log('state after clips call', this.state);
         }  
@@ -131,9 +131,9 @@ class App extends React.Component {
     return (
       <div>
         <div>{this.state.games.length ? <TopGames data={this.state.games} click={this.handleClick1} click2={this.handleClick2} click3={this.handleClick3}/>: null}</div>
-        <VideoDiv>{this.state.games.length ? <GameOneClips clips={this.state.clips1}/> : null}</VideoDiv>
-        <VideoDiv>{this.state.games.length ? <GameTwoClips clips={this.state.clips2}/> : null}</VideoDiv>
-        <VideoDiv>{this.state.games.length ? <GameThreeClips clips={this.state.clips3}/> : null}</VideoDiv>
+        <VideoDiv>{this.state.games.length ? <GameOneClips clips={this.state.clips1} games={this.state.games[0].name}/> : null}</VideoDiv>
+        <VideoDiv>{this.state.games.length ? <GameTwoClips clips={this.state.clips2} games={this.state.games[1].name}/> : null}</VideoDiv>
+        <VideoDiv>{this.state.games.length ? <GameThreeClips clips={this.state.clips3} games={this.state.games[2].name}/> : null}</VideoDiv>
       </div>
     )
   }
