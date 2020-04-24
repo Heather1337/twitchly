@@ -33,6 +33,7 @@ const TopGames = (props) => {
   var gameImg2 = game2.replace("{height}", "250").replace("{width}", "188");
   var game3 = props.data[2].box_art_url;
   var gameImg3 = game3.replace("{height}", "250").replace("{width}", "188");
+  var imgArr = [gameImg1, gameImg2, gameImg3];
 
   console.log(game1);
   return (

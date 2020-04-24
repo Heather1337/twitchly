@@ -37,7 +37,7 @@ class App extends React.Component {
       if (name[i] === ' ') {
         searchName.push('%20')
       } 
-      else if ( name[i] === '-') {
+      else if ( name[i] === ':') {
         searchName.push('%3A');
       } else {
         searchName.push(name[i]);
